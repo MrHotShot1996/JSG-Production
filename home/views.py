@@ -5,6 +5,13 @@ from django.template import loader
 # Importing Models
 
 # Create your views here.
+def home(request):
+	title = 'JSG - Home page'
+	context = {
+	'title':title
+	}
+	return render(request, 'home/home.html', context)
+
 def index(request):
 
 	title = 'JSG - Home page'
