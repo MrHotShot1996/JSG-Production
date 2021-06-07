@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.template import loader
 from django.core.mail import send_mail, mail_admins
 from .forms import Register
+import os
 
 # Importing Models
 from .models import Users
@@ -32,7 +33,7 @@ def register(request):
 			# User Mailing
 			subject = f'Welcome to JSG {f_name}'
 			message = 'Testing'
-			from_email = 'mydev1996@gmail.com'
+			from_email = os.environ.get('email_name')
 			recipient_list = [em]
 
 			user_mail = send_mail(

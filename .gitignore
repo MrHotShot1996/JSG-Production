@@ -1,4 +1,6 @@
 db.sqlite3
 # keys.py
 __pycache__/
+keys
+keys.env
 keys.py

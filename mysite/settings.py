@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 # Imports
 from pathlib import Path
-from keys import sk, email_name, email_pass, admins
 import os
 import django_heroku
 
@@ -32,6 +31,7 @@ ALLOWED_HOSTS = [
 'localhost',
 '127.0.0.1',
 '0.0.0.0',
+'http://127.0.0.1:8000/',
 ]
 
 
@@ -144,7 +144,9 @@ EMAIL_HOST_USER = os.environ.get('email_name')
 EMAIL_HOST_PASSWORD = os.environ.get('email_pass')
 
 # Admins list
-ADMINS = os.environ.get('admins')
+ADMINS = [os.environ.get('admins').split(",")]
+
+
 
 # Activate Django-Heroku.
 django_heroku.settings(locals())
