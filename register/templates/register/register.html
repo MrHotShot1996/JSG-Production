@@ -1,0 +1,12 @@
+{% extends "home/base.html" %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+<div class="container m-4">
+	<form method="POST" class="form-group">
+		{% csrf_token %}
+		{{forms|crispy}}
+		<button type="submit" class="btn btn-success">Join</button>
+	</form>
+</div>
+{% endblock %}
