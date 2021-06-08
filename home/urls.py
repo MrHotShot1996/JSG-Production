@@ -4,10 +4,10 @@ from . import views
 
 urlpatterns = [
 	path('', views.index, name='index'),
-	path('home/', views.index, name='home'),
 	path('home/about/', views.about, name='about'),
 	]
-	
+
+	# Testing paths 
 '''
 path('test/<int:id>', views.test, name='test'),
 path('test/<str:test_var>', views.testvar, name='testvar'),

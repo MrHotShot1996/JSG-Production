@@ -1,18 +1,15 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
 from django.http import HttpResponse, Http404
 from django.template import loader
+from .models import SiteVisits
 
 # Importing Models
 
 # Create your views here.
-def home(request):
-	title = 'JSG - Home page'
-	context = {
-	'title':title
-	}
-	return render(request, 'home/home.html', context)
-
 def index(request):
+	# Counts the page views run by models
+	vc = SiteVisits.objects.get(id=1)
+	vc.view_count()
 
 	title = 'JSG - Home page'
 	context = {

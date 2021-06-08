@@ -90,7 +90,3 @@ def success(request):
 
 
 
-
-
-
-	
