@@ -8,13 +8,13 @@ from .models import SiteVisits
 # Create your views here.
 def index(request):
 	# Checks if the first view is created
-	vc = SiteVisits.objects.get(id=1)
-	if vc:
-		vc.view_count()
-	# Counts the page views run by models
-	else:
-		vc = SiteViews(id=1, view_count=1)
-		vc.save()
+	# vc = SiteVisits.objects.get(id=1)
+	# if vc:
+	# 	vc.view_count()
+	# # Counts the page views run by models
+	# else:
+	# 	vc = SiteViews(id=1, view_count=1)
+	# 	vc.save()
 	
 
 	title = 'JSG - Home page'
