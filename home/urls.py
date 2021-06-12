@@ -7,6 +7,8 @@ urlpatterns = [
 	path('home/about/', views.about, name='about'),
 	]
 
+	
+
 	# Testing paths 
 '''
 path('test/<int:id>', views.test, name='test'),
