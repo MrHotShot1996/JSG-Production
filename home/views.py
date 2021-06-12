@@ -8,14 +8,14 @@ from .models import SiteVisits
 # Create your views here.
 def index(request):
 	# Checks if the first view is created
-	# try:
-	# 	vc = SiteVisits.objects.get(id=1)
-	# except:
-	# 	vc = SiteVisits(page_visits=1)
-	# 	vc.save()
+	try:
+		vc = SiteVisits.objects.get(id=1)
+	except:
+		vc = SiteVisits(page_visits=1)
+		vc.save()
 	
-	# if vc:
-	# 	vc.view_count()
+	if vc:
+		vc.view_count()
 	# Counts the page views run by models
 	
 	
