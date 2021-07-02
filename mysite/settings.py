@@ -85,13 +85,14 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': ps_name,
+        'USER': ps_name,
+        'HOST': ps_host,
+        'PORT': ps_port,
     }
 }
-import dj_database_url
-db_from_env = dj_database_url.config(conn_max_age=600)
-DATABASES['default'].update(db_from_env)
+
 
 
 # Password validation
@@ -149,7 +150,11 @@ EMAIL_HOST_PASSWORD = os.environ.get('email_pass')
 # Admins list
 ADMINS = [os.environ.get('admins').split(",")]
 
-
-
 # Activate Django-Heroku.
 django_heroku.settings(locals())
+
+# Postgress Config
+ps_name = os.environ.get('ps_name')
+ps_pass = os.environ.get('ps_pass')
+ps_host = os.environ.get('ps_host')
+ps_port = os.environ.get('ps_port')
