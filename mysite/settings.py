@@ -85,14 +85,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Postgress Config
 ps_name = os.environ.get('ps_name')
 ps_pass = os.environ.get('ps_pass')
+ps_host = os.environ.get('ps_host')
 
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': ps_name,
         'USER': ps_name,
-        'PASSWORD' : 'ps_pass',
-        'HOST': 'hattie.db.elephantsql.com',
+        'PASSWORD' : ps_pass,
+        'HOST': ps_host,
         'PORT': '5432',
     }
 }
