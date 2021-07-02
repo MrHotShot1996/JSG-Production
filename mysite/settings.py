@@ -82,6 +82,9 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
+# Postgress Config
+ps_name = os.environ.get('ps_name')
+ps_pass = os.environ.get('ps_pass')
 
 DATABASES = {
     'default': {
@@ -153,8 +156,6 @@ ADMINS = [os.environ.get('admins').split(",")]
 # Activate Django-Heroku.
 django_heroku.settings(locals())
 
-# Postgress Config
-ps_name = os.environ.get('ps_name')
-ps_pass = os.environ.get('ps_pass')
+
 
 
