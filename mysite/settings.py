@@ -88,7 +88,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ps_name',
         'USER': 'ps_name',
-        'HOST': 'ps_host',
+        'HOST': 'hattie.db.elephantsql.com',
         'PORT': '5432',
     }
 }
@@ -156,5 +156,5 @@ django_heroku.settings(locals())
 # Postgress Config
 ps_name = os.environ.get('ps_name')
 ps_pass = os.environ.get('ps_pass')
-ps_host = os.environ.get('ps_host')
+
 
