@@ -83,22 +83,20 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 # Postgress Config
-ps_name = os.environ.get('ps_name')
-ps_pass = os.environ.get('ps_pass')
-ps_host = os.environ.get('ps_host')
+# ps_name = os.environ.get('ps_name')
+# ps_pass = os.environ.get('ps_pass')
+# ps_host = os.environ.get('ps_host')
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': ps_name,
-        'USER': ps_name,
-        'PASSWORD' : ps_pass,
-        'HOST': ps_host,
-        'PORT': '5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3')
     }
 }
 
-
+import dj_database_url
+db_from_env = dj_database_url.config(conn_max_age=600)
+DATABASES['default'].update(db_from_env)
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
