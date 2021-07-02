@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'ps_name',
         'USER': 'ps_name',
         'HOST': 'ps_host',
-        'PORT': 'ps_port',
+        'PORT': '5432',
     }
 }
 
@@ -157,4 +157,4 @@ django_heroku.settings(locals())
 ps_name = os.environ.get('ps_name')
 ps_pass = os.environ.get('ps_pass')
 ps_host = os.environ.get('ps_host')
-ps_port = os.environ.get(int('ps_port'))
+
