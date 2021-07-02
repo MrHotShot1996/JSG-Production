@@ -91,7 +91,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'ps_name',
         'USER': 'ps_name',
-        'PASSWORD' : 'ps_pass'
+        'PASSWORD' : 'ps_pass',
         'HOST': 'hattie.db.elephantsql.com',
         'PORT': '5432',
     }
