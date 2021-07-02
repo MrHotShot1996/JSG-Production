@@ -5,9 +5,10 @@ from . import views
 urlpatterns = [
 	path('', views.index, name='index'),
 	path('home/about/', views.about, name='about'),
+	path('test', views.test, name='test'),
 	]
 
-	
+
 
 	# Testing paths 
 '''

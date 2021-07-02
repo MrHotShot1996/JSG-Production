@@ -1,7 +1,21 @@
+body {
+	font-family: 'PT Sans', sans-serif;
+}
+
 .footer-wrapper {
 	margin: 10em;
 }
 
+
+
 .col {
 	background-color: #544667;
+}
+
+.qt-space {
+	margin-top: 50px
+}
+
+.m1 {
+	margin: 100px
 }

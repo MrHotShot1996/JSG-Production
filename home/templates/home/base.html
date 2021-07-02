@@ -12,6 +12,7 @@
 <body>
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <img src="{% static 'home/jsglogo.png' %}" width="80" height="60">
   <a class="navbar-brand" href="{% url 'index'%}">Jeddah Support Group</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -32,7 +33,9 @@
 <div id="content" name="content">
     {% block content %}
     {% endblock %}
+
 </div>
+
 <!-- Footer -->
 <footer class="page-footer font-small cyan darken-3">
 
@@ -46,21 +49,14 @@
       <div class="col-md-12 py-5">
         <div class="mb-5 flex-center">
 
-          <!-- Facebook -->
-          <a class="fb-ic">
-            <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!-- Twitter -->
-          <a class="tw-ic">
-            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-          </a>
-          <!--Instagram-->
+          <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    			 <a href="{% url 'index' %}"> Jeddah Support Group</a>
+  			</div>
+         <!--Instagram-->
           <a class="ins-ic" href="https://www.instagram.com/jeddahsupportgroup/?hl=en">
             <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
           </a>
-          	<div class="footer-copyright text-center py-3">© 2020 Copyright:
-    			<a href="{% url 'index' %}"> Jeddah Support Group</a>
-  			</div>
+
         </div>
       </div>
       <!-- Grid column -->

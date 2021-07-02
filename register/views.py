@@ -4,10 +4,11 @@ from django.urls import reverse
 from django.template import loader
 from django.core.mail import send_mail, mail_admins
 from .forms import Register
+import random
 import os
 
 # Importing Models
-from .models import Users
+from .models import Users, quotes
 
 # Create your views here.
 def register(request):
@@ -57,6 +58,15 @@ def register(request):
 				fail_silently = False,
 				)
 
+			# Mails the coordinator
+			# coord_email = os.environ.get('coord_email')
+			# coord_mail = send_mail(
+			# 	subject,
+			# 	message,
+			# 	from_email
+			# 	coord_email,
+			# 	)
+
 			return redirect('success')
 
 			
@@ -81,10 +91,21 @@ def register(request):
 def success(request):
 	# Rendering name session to the template
 	welcome = request.session['f_name']
+	
+	# Setting a random quote to be templated
+	def quote():
+		ran = ["quote1","quote2","quote3"]
+		n = random.randint(0,2)
+		ran = ran[n]
+		qt = quotes[ran]
+		return qt
 
-		
+	quote()
+
+
 	context = {
-		'welcome' : welcome
+		'welcome' : welcome,
+		'quote':quote
 		}
 	return render(request, 'register/success.html', context)
 

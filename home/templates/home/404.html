@@ -1,0 +1,28 @@
+{% extends 'home/base.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+{% block content %}
+<div class="container">
+	<div class="text-center m1">
+		<h1>Page Not Found</h1>
+		<p>Please click on the button to go back home</p>
+		<a class="btn btn-primary btn-lg" href="{% url 'index'%}" role="button">Home</a>
+	</div>
+</div>
+
+<!-- To push the footer -->
+<div class="footer-wrapper">
+	
+</div>
+{% endblock %}
+
+
+
+</body>
+</html>
