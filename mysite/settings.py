@@ -89,7 +89,7 @@ DATABASES = {
         'NAME': 'ps_name',
         'USER': 'ps_name',
         'HOST': 'ps_host',
-        'PORT': 'ps_port',
+        'PORT': int('ps_port'),
     }
 }
 
