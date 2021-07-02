@@ -89,8 +89,8 @@ ps_pass = os.environ.get('ps_pass')
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ps_name',
-        'USER': 'ps_name',
+        'NAME': ps_name,
+        'USER': ps_name,
         'PASSWORD' : 'ps_pass',
         'HOST': 'hattie.db.elephantsql.com',
         'PORT': '5432',
