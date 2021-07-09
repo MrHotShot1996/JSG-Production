@@ -32,6 +32,7 @@ ALLOWED_HOSTS = [
 '127.0.0.1',
 '0.0.0.0',
 'http://127.0.0.1:8000/',
+'192.168.1.37'
 ]
 
 
@@ -82,10 +83,6 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
-# Postgress Config
-# ps_name = os.environ.get('ps_name')
-# ps_pass = os.environ.get('ps_pass')
-# ps_host = os.environ.get('ps_host')
 
 DATABASES = {
     'default': {
@@ -94,6 +91,7 @@ DATABASES = {
     }
 }
 
+#PostgreSQL Config
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)

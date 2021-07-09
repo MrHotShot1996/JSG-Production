@@ -19,3 +19,24 @@ body {
 .m1 {
 	margin: 100px
 }
+
+
+
+.home-font {
+	color: white;
+	font-weight: bold;
+	
+}
+
+.hands-img {
+    background-image: url("hands.jpg");
+	background-size: cover;
+	filter: brightness(80%);
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .vw-mob1 {max-width: 300px;
+
+  	}
+  }
