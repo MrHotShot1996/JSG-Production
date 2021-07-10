@@ -14,6 +14,9 @@
 	<form method="POST" class="form-group">
 		{% csrf_token %}
 		{{forms|crispy}}
+			<label for="toa1"><a href="{% url 'terms'%}">I've read the terms and agree to the conditions</a></label>
+			<input type="checkbox" id="toa1" name="toa" value="Toa" required>
+
 		<button type="submit" class="btn btn-success">Join</button>
 	</form>
 </div>

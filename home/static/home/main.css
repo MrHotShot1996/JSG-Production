@@ -21,7 +21,6 @@ body {
 }
 
 
-
 .home-font {
 	color: white;
 	font-weight: bold;
@@ -36,7 +35,9 @@ body {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-  .vw-mob1 {max-width: 300px;
-
+  	.vw-mob1 {max-width: 300px;
+  	}
+  	#reg-but {
+  		
   	}
   }

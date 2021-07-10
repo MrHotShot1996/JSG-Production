@@ -109,5 +109,9 @@ def success(request):
 		}
 	return render(request, 'register/success.html', context)
 
+# Terms and agreement
+def terms(request):
+	return render(request, 'register/terms.html')
+
 
 
